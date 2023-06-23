@@ -4,7 +4,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Version>0.0.3</Version>
+    <Version>0.0.2</Version>
     <Title>Simple Menu Manager</Title>
     <Description>Slim Extension is a .NET library that provides an easy-to-use object slimming extension.</Description>
     <Author>Terrence Kuchel aka DropBear</Author>

@@ -4,7 +4,7 @@ namespace DropBear.Extensions.Slim;
 
 public static class ServiceCollectionExtensions
 {
-    public static IServiceCollection AddSlim(this IServiceCollection services, Action<SlimOptions> configure)
+    public static IServiceCollection AddSlimExtension(this IServiceCollection services, Action<SlimOptions> configure)
     {
         services.Configure(configure);
         //services.AddSingleton<MenuManager>();
