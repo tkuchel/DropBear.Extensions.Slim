@@ -19,7 +19,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 6.0.x
+        dotnet-version: 7.0.x
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
@@ -36,7 +36,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 6.0.x
+        dotnet-version: 7.0.x
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
@@ -44,4 +44,7 @@ jobs:
     - name: Pack
       run: dotnet pack --no-build --configuration Release --output ./nupkg
     - name: Push
-      run: dotnet nuget push ./nupkg/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+      uses: rohith/publish-nuget@v2
+      with:
+        PROJECT_FILE_PATH: DropBear.Extensions.Slim/DropBear.Extensions.Slim.csproj
+        NUGET_KEY: ${{secrets.NUGET_API_KEY}}
